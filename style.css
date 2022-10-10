@@ -65,8 +65,17 @@ ul{
     padding-left: 0;
 }
 
+li{
+    list-style: none;
+}
 
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 
+}
 
 
 
@@ -146,3 +155,37 @@ p{
 .navbar__menu__item:hover{
     background-color: var(--color-pink);
 }
+
+
+/* Home */
+#home{
+    /* 백그라운드 이미지 반복안되고 전체 사이즈에 맞추기 */
+    /* background: url(https://i.pinimg.com/236x/3d/1c/21/3d1c21d7acac5ddd5a99466721deda5a.jpg) center/cover no-repeat; */
+    background: url(https://i.pinimg.com/236x/3d/1c/21/3d1c21d7acac5ddd5a99466721deda5a.jpg);
+    padding: 40px;
+    text-align: center;
+}
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    /* 동그란 테두리 */
+    /* border-radius: 50%;
+    border: 2px solid var(--color-light-white) */
+}
+
+.home__title,
+.home__description{
+    color: var(--color-dark-grey);
+}
+
+
+.home__contact{
+    color: var(--color-dark-grey);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-dark-grey);
+    border-radius: var(--size-border-radius);
+}
+
