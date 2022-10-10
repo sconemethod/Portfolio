@@ -47,7 +47,8 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
+                        <!-- section이면서도 section__container -->
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p> 국비학원 구디아카데미 6회차 수료, JAVA Spring, 간단한 html,css,javascript를 사용할 수 있습니다</p>
         <div class="about__majors">
@@ -108,6 +109,7 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
+        <div class="section">
         <h1>Skills</h1>
         <h2>skills & Attributes</h2>
         <p>
@@ -117,30 +119,33 @@
             <div class="skillset__left">
                 <h3 class="skillset__title">Skills</h3>
                 <div class="skill">
-                    <div class="skill_description"></div>
-                    <span>java</span>
-                    <span>70%</span>
-                </div>
-                <div class="skill__bar">
-                    <div class="skill__value"></div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill_description"></div>
-                    <span>HTML(html, css, javascript)</span>
-                    <span>80%</span>
-                </div>
-                <div class="skill__bar">
-                    <div class="skill__value"></div>
+                    <div class="skill__description">
+                        <span>java</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 60%;"></div>
+                    </div>
                 </div>
 
                 <div class="skill">
-                    <div class="skill_description"></div>
-                    <span>Database</span>
-                    <span>50%</span>
+                    <div class="skill__description">
+                        <span>HTML(html, css, javascript)</span>
+                        <span>80%</span>
+                    </div>    
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 80%;"></div>
+                    </div>
                 </div>
-                <div class="skill__bar">
-                    <div class="skill__value"></div>
+
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>Database</span>
+                        <span>50%</span>
+                    </div>    
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 60%;"></div>
+                    </div>
                 </div>
             </div>
             <div class="skillset__right">
@@ -163,6 +168,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Work -->

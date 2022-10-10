@@ -206,14 +206,24 @@ p {
 .section {
     padding: 50px;
     text-align: center;
-    /* 최대로 커질수 있는 크기 제한 */
-    max-width: 1200px;
     margin: auto;
+}
+
+    /* max-width 따로 지정하고 싶을 떄 */
+.section__container {
+        /* 최대로 커질수 있는 크기 제한 */
+        max-width: 1200px;
+        margin: auto;
 }
 
 
 
+
+
+
+
 /* About */
+
 .about__majors {
     display: flex;
     justify-content: space-between;
@@ -277,3 +287,68 @@ p {
 .academy__period {
     font-size: var(--font-micro);
 }
+
+
+/* Skills */
+
+#skills {
+    /* section에서 max-width 를 지정해줬기 때문에 고정값으로 안늘어난다. */
+    background-color: var(--color-bread);
+}
+
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+
+.skillset__title {
+    color: var(--color-white);
+}
+
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value {
+    /*   근데 우리는 00%를  html에서 정의하고 그 값을 json으로 관리하고 싶다. ->  html에서 style inline */
+    width: 70%;
+    height: 3px;
+    background-color: var(--color-dark-pink);
+}
+
+.skillset__right {
+    flex-basis: 40%;
+}
+
+.tools {
+    background-color: var(--color-grey);
+}
+
+.tools, .etc {
+    padding: 20px;
+}
+
+/* Work */
+
+/* Testimonials */
+
+/* Contact */
