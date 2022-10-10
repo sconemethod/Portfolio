@@ -131,6 +131,7 @@ p {
     align-items: center;
     color: var(--color-dark-white);
     padding: 16px;
+    z-index: 1;
 }
 
 #navbar.navbar--dark {

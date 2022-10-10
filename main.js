@@ -17,3 +17,23 @@ document.addEventListener('scroll', ()=>{
         navbar.classList.remove('navbar--dark');
     }
 });
+
+
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+ 
+    //  아래 조건 쓰기전에는 menu 바 모두(버튼 아닌애들까지) 클릭됐을때 결과를 도출하기 떄문에 값이 없는 애들도 있다.
+    //console.log(event.target.dataset.link);
+const target = event.target;
+const link = target.dataset.link;
+if(link == null){
+    // 아무것도 하지 않기
+    return;
+}
+// 버튼 애들만 할당이 된다.
+console.log(event.target.dataset.link);
+const scrollTo = document.querySelector(link);
+//이동
+scrollTo.scrollIntoView({ behavior: 'smooth' });
+})
