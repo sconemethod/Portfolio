@@ -158,7 +158,18 @@ p {
 }
 
 
+.navbar__toggle-btn {
+    /* 원래 자리에서 떨어지게  */
+    position: absolute;
+    top: 24x;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    /* 평소엔 안보이고 미디어 쿼리일때 보여야 하니까 */
+    display: none;
+    /* opacity 로 안한 이유 그럼 클릭이 되어서 아예 안보이고 클릭 안되게 처리 */
 
+}
 
 
 
@@ -486,7 +497,7 @@ p {
 .testimonial {
     display: flex;
     margin: 32px 0;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .testimonial__avatar {
@@ -520,6 +531,13 @@ p {
 }
 
 
+
+
+
+
+
+
+
 /* Contact */
 
 #contact {
@@ -548,3 +566,48 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
+
+/* For below 768px screen width - 반응형 줄였을때  */
+/* 미디어쿼리 : 스크린 사이즈가 작을때만 나오는 */
+/* 미디어쿼리는 최대한 간결하고, 추려진 아이들만 들어가게 스타일링은 위에서, 보여지고,안보여지는 것만 미디어쿼리 내에서 쓰기*/
+@media screen and (max-width:768px) {
+    .navbar__toggle-btn {
+        /* 위에사 none 으로 감춘거 보여주기 */
+        display: block;    
+    }
+
+    #navbar {
+        /* 위에서 아래로 바꾸기 : column [중심축이 수직] */
+        flex-direction: column;
+        /* 수직을 수평 반대쪽에서 정리를 해야하니까 flex-start로 왼쪽 정렬*/
+        align-items: flex-start;
+    } 
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        /* 메뉴 토글 누르면 보이게 하려고 가리기 */
+        display: none;
+    }
+
+    .about__majors {
+        /* 나란히 정렬되어있는걸 한줄에 하나씩 수직정렬 */
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .skillset {
+        flex-direction: column;   
+    }
+    
+    .project {
+        /* grow : 알아서 화면 너비만큼 사이즈를 메꿔주는 녀석 */
+        flex-grow: 1;
+    }
+
+   
+}
